@@ -71,7 +71,7 @@ Note:
   ];
 
   useEffect(() => {
-    if (session?.user?.email === "zinanreolan2330@gmail.com") {
+    if (session?.user?.email === "lianfredra@gmail.com") {
       setExtensions(dummyExtensions);
     }
   }, [session]);
@@ -82,7 +82,7 @@ Note:
       <div className="w-64 bg-[#1F2937] text-white">
         <div className="p-4 flex items-center space-x-2 border-b border-gray-700">
           <FaShieldAlt className="text-[#00C896] text-xl" />
-          <span className="font-bold text-lg">Extension Guard</span>
+          <span className="font-bold text-lg">TimerX</span>
         </div>
 
         <div className="px-4 py-6">
@@ -175,10 +175,6 @@ Note:
               <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#3B5BA9] bg-opacity-10 text-[#3B5BA9]">
                 All Extensions
                 <button className="ml-1 hover:text-[#324d91]">×</button>
-              </div>
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                Security Warnings
-                <button className="ml-1 hover:text-yellow-900">×</button>
               </div>
               <button className="text-xs text-[#3B5BA9] hover:text-[#324d91] font-medium">
                 Clear All

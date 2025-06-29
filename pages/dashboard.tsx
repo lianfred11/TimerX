@@ -79,7 +79,7 @@ function Dashboard() {
       <div className="w-64 bg-[#1F2937] text-white">
         <div className="p-4 flex items-center space-x-2 border-b border-gray-700">
           <FaShieldAlt className="text-[#00C896] text-xl" />
-          <span className="font-bold text-lg">Extension Timer</span>
+          <span className="font-bold text-lg">TimerX</span>
         </div>
 
         <div className="px-4 py-6">
