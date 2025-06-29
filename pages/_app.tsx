@@ -7,7 +7,7 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
   return (
     <SessionProvider session={session}>
       <Head>
-        <title>Extension Timer</title>
+        <title>TimerX</title>
       </Head>
       <Component {...pageProps} />
     </SessionProvider>

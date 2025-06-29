@@ -11,7 +11,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <FaShieldAlt className="text-[#00C896] text-2xl" />
-            <span className="text-xl font-bold">Extension Timer</span>
+            <span className="text-xl font-bold">TimerX</span>
           </div>
           <div className="hidden md:flex space-x-8">
             <Link href="/terms-of-services" className="hover:text-[#00C896] transition">Terms of Services</Link>
@@ -29,7 +29,7 @@ export default function Home() {
               Easily Add a Simple Usage Timer to Your Extensions
             </h1>
             <p className="mt-6 text-lg text-gray-600 mb-8">
-              Extension Timer provides a simple usage timer for your installed extensions.
+              TimerX provides a simple usage timer for your installed extensions.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <GoogleButton />
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#1F2937] mb-6">Ready to see your usage?</h2>
           <p className="text-lg text-gray-600 mb-8">
-            Join thousands of users who see their usages with Extension Timer.
+            Join thousands of users who see their usages with TimerX.
           </p>
           <GoogleButton />
         </div>
@@ -88,14 +88,14 @@ export default function Home() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <FaShieldAlt className="text-[#00C896] text-2xl" />
-              <span className="text-xl font-bold">Extension Timer</span>
+              <span className="text-xl font-bold">TimerX</span>
             </div>
 
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
-          <p>© 2025 Extension Timer. All rights reserved.</p>
+          <p>© 2025 TimerX. All rights reserved.</p>
         </div>
       </footer>
     </div>
