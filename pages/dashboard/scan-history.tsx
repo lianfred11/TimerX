@@ -71,7 +71,7 @@ function ScanHistory() {
       <div className="w-64 bg-[#1F2937] text-white">
         <div className="p-4 flex items-center space-x-2 border-b border-gray-700">
           <FaShieldAlt className="text-[#00C896] text-xl" />
-          <span className="font-bold text-lg">Extension Guard</span>
+          <span className="font-bold text-lg">TimerX</span>
         </div>
 
         <div className="px-4 py-6">
@@ -143,7 +143,7 @@ function ScanHistory() {
           <div className="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>
               <h2 className="text-lg font-semibold text-[#1F2937]">All Scan Records</h2>
-              <p className="text-sm text-gray-500">View and manage your extension security scan history</p>
+              <p className="text-sm text-gray-500">View and manage your extension scan history</p>
             </div>
             <div className="flex gap-3">
               <button className="flex items-center text-sm px-3 py-2 border rounded-md hover:bg-gray-50 transition">
@@ -200,23 +200,6 @@ function ScanHistory() {
                       <td className="px-4 py-3 whitespace-nowrap">
                         <div className="text-sm text-gray-900">{scan.date}</div>
                         <div className="text-xs text-gray-500">{scan.time}</div>
-                      </td>
-                      <td className="px-4 py-3 whitespace-nowrap">
-                        {scan.result === 'clean' && (
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                            <FaCheckCircle className="mr-1" /> Clean
-                          </span>
-                        )}
-                        {scan.result === 'warning' && (
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                            <FaExclamationTriangle className="mr-1" /> Warning
-                          </span>
-                        )}
-                        {scan.result === 'critical' && (
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                            <FaExclamationTriangle className="mr-1" /> Critical
-                          </span>
-                        )}
                       </td>
                       <td className="px-4 py-3 whitespace-nowrap">
                         <div className="text-sm text-gray-900">

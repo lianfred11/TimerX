@@ -165,7 +165,7 @@ Note:
                   </button>
                 </div>
                 <button className="px-4 py-1 text-sm font-medium bg-[#3B5BA9] text-white rounded hover:bg-opacity-90 transition">
-                  Run Security Scan
+                  Run New Scan
                 </button>
               </div>
             </div>
@@ -188,24 +188,6 @@ Note:
                   ext.status === 'warning' ? 'border-yellow-200 bg-yellow-50' :
                     'border-gray-200'
                   }`}>
-                  {/* Status indicator */}
-                  <div className="absolute top-4 right-4">
-                    {ext.status === 'secure' && (
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                        <FaCheckCircle className="mr-1" /> Secure
-                      </span>
-                    )}
-                    {ext.status === 'warning' && (
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                        <FaExclamationTriangle className="mr-1" /> Warning
-                      </span>
-                    )}
-                    {ext.status === 'critical' && (
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                        <FaExclamationTriangle className="mr-1" /> Critical
-                      </span>
-                    )}
-                  </div>
 
                   {/* Extension info */}
                   <div className="flex items-start">
