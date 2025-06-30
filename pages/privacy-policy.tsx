@@ -153,7 +153,7 @@ function PrivacyPolicy() {
               You can request deletion of your account and all associated data at any time by:
             </p>
             <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-4">
-              <li>Contacting us at privacy@extensionguard.icu</li>
+              <li>Contacting us at lianfredra@gmail.com</li>
             </ul>
             <p className="text-gray-600">
               Upon receiving your request, we will delete your account and personal information within 30 days, except for information that we are required to retain for legal purposes or legitimate business interests.

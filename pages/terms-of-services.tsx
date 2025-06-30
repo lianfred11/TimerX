@@ -248,7 +248,7 @@ function TermsOfService() {
               If you have any questions about these Terms, please contact us:
             </p>
             <div className="bg-gray-50 p-4 rounded-md">
-              <p className="text-gray-700">Email: legal@extensionguard.icu</p>
+              <p className="text-gray-700">Email: lianfredra@gmail.com</p>
             </div>
           </section>
         </div>
