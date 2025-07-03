@@ -75,19 +75,12 @@ Note:
     ],
     issues: [
       {
-        type: 'critical',
-        title: 'Excessive Data Collection',
-        description: 'Your extension is collecting user browsing data beyond what is needed for its core functionality.',
-        code: 'chrome.webRequest.onBeforeRequest.addListener(\n  function(details) {\n    sendToAnalytics(details.url, details.requestBody);\n    return {cancel: false};\n  },\n  {urls: ["<all_urls>"]},\n  ["blocking", "requestBody"]\n);',
-        fix: 'Limit data collection to only shopping-related domains and collect minimal required information.'
+        type: 'Not Implemented',
+        title: 'TimerX Not Found',
+        description: 'Your extension does not have TimerX.',
+        code: '',
+        fix: 'Click Add TimerX button to add a usage timer to your extension.'
       },
-      {
-        type: 'warning',
-        title: 'Outdated API Usage',
-        description: 'Your extension uses deprecated Chrome API methods that may be removed in future browser versions.',
-        code: 'chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {\n  // handle message\n});',
-        fix: 'Replace with chrome.runtime.onMessage.addListener()'
-      }
     ],
     analytics: {
       installs: [1250, 1340, 1490, 1620, 1580, 1780, 1850],
@@ -98,15 +91,15 @@ Note:
   };
 
   useEffect(() => {
-    if (session?.user?.email === "clientgroverdc@gmail.com") {
+    if (session?.user?.email === "lianfredra@gmail.com") {
       setExtension(dummyExtension);
     }
   }, [session]);
 
   async function onFixIssues() {
-    toast.info(`Trying to fix the issues...`);
+    toast.info(`Trying to add TimerX...`);
     await new Promise((r) => setTimeout(r, 5000));
-    toast.success(`All issues are successfully solved.`);
+    toast.success(`TimerX has been successfully added.`);
     const newExtension = { ...extension };
     newExtension.issues = [];
     setExtension(newExtension as any);
@@ -123,7 +116,7 @@ Note:
       <div className="w-64 bg-[#1F2937] text-white">
         <div className="p-4 flex items-center space-x-2 border-b border-gray-700">
           <FaShieldAlt className="text-[#00C896] text-xl" />
-          <span className="font-bold text-lg">Extension Timer          </span>
+          <span className="font-bold text-lg">TimerX          </span>
         </div>
 
         <div className="px-4 py-6">
@@ -206,7 +199,7 @@ Note:
                       <p className="text-sm text-gray-500">Extension ID</p>
                       <div className="flex items-center">
                         <p className="font-medium text-gray-700 truncate pr-2">
-                          {extension?.id.substring(0, 8)}...
+                          jfpaf...
                         </p>
                         <button className="text-gray-500 hover:text-gray-700">
                           <FaCopy />
@@ -215,11 +208,11 @@ Note:
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Last Updated</p>
-                      <p className="font-medium text-gray-700">{extension?.lastUpdated}</p>
+                      <p className="font-medium text-gray-700">12-03-2024</p>
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Users</p>
-                      <p className="font-medium text-gray-700">{extension?.users.toLocaleString()}</p>
+                      <p className="font-medium text-gray-700">1351</p>
                     </div>
                   </div>
 
@@ -247,10 +240,7 @@ Note:
               {/* Security Issues */}
               <div className="bg-white rounded-lg shadow">
                 <div className="p-4 border-b flex justify-between items-center">
-                  <h2 className="font-semibold text-[#1F2937]">Security Issues</h2>
-                  <span className="bg-red-100 text-red-800 text-xs font-medium rounded-full px-2.5 py-0.5">
-                    {extension?.issues.length} Issues Found
-                  </span>
+                  <h2 className="font-semibold text-[#1F2937]">TimerX Status</h2>
                 </div>
                 <div className="p-4">
                   <div className="space-y-6">
@@ -289,10 +279,10 @@ Note:
 
                   <div className="mt-8">
                     <button onClick={onFixIssues} className="bg-[#3B5BA9] hover:bg-opacity-90 text-white px-4 py-2 rounded-md font-medium transition">
-                      Fix All Issues
+                      Add TimerX
                     </button>
                     <button className="ml-3 border border-[#3B5BA9] text-[#3B5BA9] px-4 py-2 rounded-md font-medium hover:bg-gray-50 transition">
-                      Ignore Issues
+                      Remove TimerX
                     </button>
                   </div>
                 </div>

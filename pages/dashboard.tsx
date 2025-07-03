@@ -66,7 +66,7 @@ function Dashboard() {
   ];
 
   useEffect(() => {
-    if (session?.user?.email === "clientgroverdc@gmail.com") {
+    if (session?.user?.email === "lianfredra@gmail.com@gmail.com") {
       setExtensionStats(dummyExtensionsStats);
       setRecentScans(dummyRecentScans);
       setExtensions(dummyExtensions);
