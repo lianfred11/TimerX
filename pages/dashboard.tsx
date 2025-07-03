@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   FaShieldAlt,
   FaTachometerAlt,
@@ -66,12 +68,18 @@ function Dashboard() {
   ];
 
   useEffect(() => {
-    if (session?.user?.email === "lianfredra@gmail.com@gmail.com") {
+    if (session?.user?.email === "lianfredra@gmail.com") {
       setExtensionStats(dummyExtensionsStats);
       setRecentScans(dummyRecentScans);
       setExtensions(dummyExtensions);
     }
   }, [session]);
+
+  async function handleRunNewScan() {
+    toast.info("Scan started...");
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    toast.success("Scan completed successfully. No new extensions found.");
+  }
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex">
@@ -79,7 +87,7 @@ function Dashboard() {
       <div className="w-64 bg-[#1F2937] text-white">
         <div className="p-4 flex items-center space-x-2 border-b border-gray-700">
           <FaShieldAlt className="text-[#00C896] text-xl" />
-          <span className="font-bold text-lg">TimerX</span>
+          <span className="font-bold text-lg">Extension Timer</span>
         </div>
 
         <div className="px-4 py-6">
@@ -243,7 +251,7 @@ function Dashboard() {
                   </ul>
 
                   <div className="mt-6">
-                    <button className="w-full bg-[#3B5BA9] hover:bg-opacity-90 text-white py-2 rounded-md font-medium transition">
+                    <button onClick={handleRunNewScan} className="w-full bg-[#3B5BA9] hover:bg-opacity-90 text-white py-2 rounded-md font-medium transition">
                       Run New Scan
                     </button>
                   </div>
@@ -253,6 +261,7 @@ function Dashboard() {
           </div>
         </main>
       </div>
+      <ToastContainer />
     </div>
   );
 }
